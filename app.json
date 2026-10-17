@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "Image2Text",
+    "slug": "Image2Text",
+    "version": "1.0.5",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.image2text",
+      "buildNumber": "1.0.5",
+      "deploymentTarget": "15.5",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Image2Text needs camera access so you can photograph documents and extract their text.",
+        "NSPhotoLibraryUsageDescription": "Image2Text needs photo access so you can select images for text extraction."
+      }
+    },
+    "android": {
+      "package": "com.image2text",
+      "versionCode": 9,
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#2B1638",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Image2Text needs camera access so you can photograph documents and extract their text.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photoPermission": "Image2Text needs photo access so you can select images for text extraction."
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "backgroundColor": "#2B1638",
+          "imageWidth": 180
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-4478899815710413~5329519231",
+          "iosAppId": "ca-app-pub-4478899815710413~5329519231",
+          "delayAppMeasurementInit": true,
+          "userTrackingUsageDescription": "Your data is used to show you relevant ads."
+        }
+      ]
+    ]
+  }
+}
